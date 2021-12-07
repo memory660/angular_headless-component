@@ -1,0 +1,12 @@
+<input
+  #fileInput
+  type="file"
+  style="display: none"
+  [attr.accept]="accept"
+  [attr.multiple]="multiple"
+  (change)="onFileSelectionChanged($event)"
+/>
+<ng-container
+  [ngTemplateOutlet]="callback.template"
+  [ngTemplateOutletContext]="templateContext"
+></ng-container>
